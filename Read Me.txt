@@ -1,0 +1,36 @@
+--43 Folders--
+The system emulates the 43 folders orginazational method using custom data structures and classes.  The main file is the Tickler file initiated from the cmd line by compiling the Tickler.java and then running the Tickler file upon which the user is presented a menu to choose from.  Choices are presented with corresponding numbers which serve as the input for the choice to list the days task, schedule a new task, reschedule an existing task, complete a task, advance the day, or exit (data is lost on exit).
+
+Data structures used:
+Custom generic Nodes used to store individual Months, Days, and Tasks which are in turn custom classes
+Month class has a reference to the list of days, and a list of tasks for the month to put into days when it is current
+Day class holds a reference to the list of tasks for the day
+Task class holds data for individual tasks that are scheduled.
+Custom CircularQueue used to link Nodes together that loops the Months simulating a year and loops the Days which are carried over to the next Month using the linkedlist (LL) class as the underlying structure.
+Tickler class creates the Months and Days and allows for user input from menu choices and schedule/rescheduling tasks.
+
+Usage:
+#Compile Tickler java file#
+prompt>javac Tickler.java
+#Call java Tickler file#
+prompt>java Tickler
+
+Welcome to the 43 folders system
+
+1. List day's tasks
+2. Schedule task
+3. Reschedule task
+4. Complete task
+5. Advance Day
+6. Exit
+
+prompt>1 or 2 or 3 etc...
+
+#1 Will list the days tasks.
+#2 Will allow the user to schedule a task by a single line input - One word tasks followed by Month name due and day number due (Ex. "Test January 1").
+#3 Allows a user to reshedule tasks of the day by entering the task name and new month and new day due (see above example).
+#4 Completes the given task entered by user (Ex. "Test").
+#5 Advances the day to the next moving the days tasks to the next day.
+#6 Exits the program (all tasks are lost on exit).
+
+--William Malone #2014381--
